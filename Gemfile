@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+ruby '2.2.2'
 
 gem 'rails', '4.2.0'
 
@@ -9,6 +10,10 @@ gem 'spring', :group => :development
 
 
 gem 'pg'
+
+group :test, :development do
+  gem 'rspec-rails'
+end
 
 
 
