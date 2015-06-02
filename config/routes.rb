@@ -1,3 +1,5 @@
 Rails.application.routes.draw do
-  resources :mangas, except: [:new, :edit]
+  scope "/api" do
+    resources :mangas, except: [:new, :edit]
+  end
 end
