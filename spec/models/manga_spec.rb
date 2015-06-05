@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe Manga, type: :model do
   before do
     @manga = Manga.new(title: "Gantz",
-                      author: "Hiroya Oku",
-                      genre: "Horror",
+                      author_list: "Hiroya Oku",
+                      genre_list: "Horror",
                       chapters: "123")
   end
 

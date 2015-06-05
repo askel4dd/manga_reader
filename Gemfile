@@ -8,8 +8,9 @@ gem 'rails-api'
 
 gem 'spring', :group => :development
 
-
 gem 'pg'
+
+gem 'acts-as-taggable-on'
 
 group :test, :development do
   gem 'rspec-rails'
