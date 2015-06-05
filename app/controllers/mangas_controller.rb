@@ -4,7 +4,11 @@ class MangasController < ApplicationController
   # GET /mangas
   # GET /mangas.json
   def index
-    @mangas = Manga.all
+    if params[:tag]
+      @mangas = Manga.tagged_with(params[:tag])
+    else
+      @mangas = Manga.all
+    end
 
     render json: @mangas
   end
@@ -54,6 +58,6 @@ class MangasController < ApplicationController
     end
 
     def manga_params
-      params.require(:manga).permit(:title, :genre, :author, :chapters)
+      params.require(:manga).permit(:title, :chapters, :genre_list, :author_list)
     end
 end

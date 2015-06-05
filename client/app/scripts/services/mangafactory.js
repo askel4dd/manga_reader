@@ -13,7 +13,10 @@ angular.module('mangaReaderApp')
     // ...
 
     // Public API here
-    return $resource('/api/mangas/:id.json', null, {
-      'update': { method:'PUT' }
-    });
+    return {
+      manga: $resource('/api/mangas/:id.json', null, {
+        'update': { method:'PUT' }
+      }),
+      tag: $resource( '/api/tag/:tag.json', null, {} )
+    };
   });
