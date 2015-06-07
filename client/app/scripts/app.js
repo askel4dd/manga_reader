@@ -35,10 +35,6 @@ angular
         templateUrl: 'views/current_manga.html',
         controller: 'CurrentMangaCtrl'
       })
-      .when('/tag/:tag', {
-        templateUrl: 'views/manga.html',
-        controller: 'MangaCtrl'
-      })
       .otherwise({
         redirectTo: '/'
       });
