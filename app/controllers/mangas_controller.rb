@@ -6,6 +6,8 @@ class MangasController < ApplicationController
   def index
     if params[:tag]
       @mangas = Manga.tagged_with(params[:tag])
+    elsif params[:query]
+      @mangas = Manga.custom_search(params[:query])
     else
       @mangas = Manga.all
     end

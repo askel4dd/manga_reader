@@ -9,5 +9,5 @@
  */
 angular.module('mangaReaderApp')
 .controller('CurrentMangaCtrl', function ($scope, $routeParams, mangaFactory) {
-    $scope.manga = mangaFactory.get({id: $routeParams.id});
+    $scope.manga = mangaFactory.get({ id: $routeParams.id });
   });

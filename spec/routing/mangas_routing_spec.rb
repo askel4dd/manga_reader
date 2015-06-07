@@ -23,9 +23,5 @@ RSpec.describe MangasController, type: :routing do
       expect(:delete => "api/mangas/1").to route_to("mangas#destroy", :id => "1")
     end
 
-    it "routes to #index" do
-      expect(get: "api/tag/action").to route_to("mangas#index", tag: "action")
-    end
-
   end
 end
