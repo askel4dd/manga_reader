@@ -12,7 +12,7 @@ class MangasController < ApplicationController
       @mangas = Manga.all
     end
 
-    render json: @mangas
+    render json: @mangas, include: [ authors: { only: :name }, genres: { only: :name } ]
   end
 
   # GET /mangas/1

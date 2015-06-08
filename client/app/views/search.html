@@ -1,3 +1,14 @@
-<form class="navbar-form">
-  <input class="form-control" placeholder="Search" type="text"/>
+<form class="navbar-form" ng-controller="MangaCtrl">
+  <div class="row">
+  <div class="col-lg-3">
+    <div class="input-group">
+      <input ng-show="isShow" class="form-control" placeholder="Search" type="text"/>
+      <span class="input-group-btn">
+      <button ng-click="toggle()" class="btn btn-default" type="button">
+      <span class="glyphicon glyphicon-search"></span>
+      </button>
+      </span>
+    </div>
+  </div>
+  </div>
 </form>

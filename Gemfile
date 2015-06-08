@@ -14,6 +14,8 @@ gem 'acts-as-taggable-on'
 
 gem 'pg_search'
 
+gem 'devise'
+
 group :test, :development do
   gem 'rspec-rails'
 end

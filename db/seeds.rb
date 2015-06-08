@@ -10,7 +10,7 @@ Manga.delete_all
 Manga.create!([
   { title: "Gantz",
     genre_list: ["Horror"],
-    author_list: ["Hiroya Oku"],
+    author_list: ["Hiroya Oku", "Vaga Titsy"],
     chapters: "123"
   },
   { title: "Naruto",

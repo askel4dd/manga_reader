@@ -1,5 +1,21 @@
-<h2> MANGA </h2>
-
-<ul ng-repeat="manga in mangas">
-  <li><a ng-href="#/manga/{{manga.id}}">{{manga.title}}</a></li>
-</ul>
+<div class="row">
+  <div class="panel panel-primary">
+    <div class="panel-heading">Comics</div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Last Update</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="manga in mangas">
+          <td><a ng-href="#/manga/{{manga.id}}">{{ manga.title }}</a></td>
+          <td>{{ authors(manga) }}</td>
+          <td>{{ manga.updated_at | date:'dd MMM yyyy - HH:mm' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
